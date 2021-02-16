@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3110F3E725DBD67300569B85 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3E625DBD67300569B85 /* TabBarController.swift */; };
+		3110F3EA25DBD6A000569B85 /* Wheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3E925DBD6A000569B85 /* Wheel.swift */; };
+		3110F3ED25DBD7C300569B85 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3EC25DBD7C300569B85 /* TableViewController.swift */; };
+		3110F3F125DBD7D800569B85 /* WheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3F025DBD7D800569B85 /* WheelViewController.swift */; };
+		3110F3F525DBDA7B00569B85 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3F325DBDA7B00569B85 /* TableCell.swift */; };
+		3110F3F625DBDA7B00569B85 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3110F3F425DBDA7B00569B85 /* TableCell.xib */; };
 		3149F66525D5B98800E42BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66425D5B98800E42BE0 /* AppDelegate.swift */; };
 		3149F66725D5B98800E42BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66625D5B98800E42BE0 /* SceneDelegate.swift */; };
 		3149F66925D5B98800E42BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66825D5B98800E42BE0 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3110F3E625DBD67300569B85 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3110F3E925DBD6A000569B85 /* Wheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheel.swift; sourceTree = "<group>"; };
+		3110F3EC25DBD7C300569B85 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3110F3F025DBD7D800569B85 /* WheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewController.swift; sourceTree = "<group>"; };
+		3110F3F325DBDA7B00569B85 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		3110F3F425DBDA7B00569B85 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		3149F66125D5B98800E42BE0 /* WheelOfChoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelOfChoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3149F66425D5B98800E42BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3149F66625D5B98800E42BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +74,12 @@
 				3149F66625D5B98800E42BE0 /* SceneDelegate.swift */,
 				3149F66825D5B98800E42BE0 /* ViewController.swift */,
 				3149F66A25D5B98800E42BE0 /* Main.storyboard */,
+				3110F3E925DBD6A000569B85 /* Wheel.swift */,
+				3110F3E625DBD67300569B85 /* TabBarController.swift */,
+				3110F3EC25DBD7C300569B85 /* TableViewController.swift */,
+				3110F3F025DBD7D800569B85 /* WheelViewController.swift */,
+				3110F3F325DBDA7B00569B85 /* TableCell.swift */,
+				3110F3F425DBDA7B00569B85 /* TableCell.xib */,
 				3149F67025D5B98A00E42BE0 /* Assets.xcassets */,
 				3149F67225D5B98A00E42BE0 /* LaunchScreen.storyboard */,
 				3149F67525D5B98A00E42BE0 /* Info.plist */,
@@ -129,6 +147,7 @@
 			files = (
 				3149F67425D5B98A00E42BE0 /* LaunchScreen.storyboard in Resources */,
 				3149F67125D5B98A00E42BE0 /* Assets.xcassets in Resources */,
+				3110F3F625DBDA7B00569B85 /* TableCell.xib in Resources */,
 				3149F66C25D5B98800E42BE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,9 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3110F3F525DBDA7B00569B85 /* TableCell.swift in Sources */,
+				3110F3F125DBD7D800569B85 /* WheelViewController.swift in Sources */,
 				3149F66925D5B98800E42BE0 /* ViewController.swift in Sources */,
+				3110F3ED25DBD7C300569B85 /* TableViewController.swift in Sources */,
 				3149F66525D5B98800E42BE0 /* AppDelegate.swift in Sources */,
 				3149F66725D5B98800E42BE0 /* SceneDelegate.swift in Sources */,
+				3110F3EA25DBD6A000569B85 /* Wheel.swift in Sources */,
+				3110F3E725DBD67300569B85 /* TabBarController.swift in Sources */,
 				3149F66F25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
