@@ -13,6 +13,8 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.addNew("Да")
+        model.addNew("Нет")
     }
     
 

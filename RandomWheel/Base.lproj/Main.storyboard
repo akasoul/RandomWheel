@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivf-04-zWD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,14 +12,42 @@
         <!--Wheel View Controller-->
         <scene sceneID="Gia-kf-nGX">
             <objects>
-                <viewController id="tr0-UH-ymU" customClass="WheelViewController" customModule="WheelOfChoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tr0-UH-ymU" customClass="WheelViewController" customModule="RandomWheel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEn-fq-8qG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wul-nZ-JQu">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2QY-XA-zDE"/>
+                                    <constraint firstAttribute="height" constant="300" id="fde-tH-apf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKO-Lo-5El">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Vpw-Wf-cA2"/>
+                                    <constraint firstAttribute="height" constant="300" id="vP7-tI-9hL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LMd-3x-IpK"/>
                         <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.080000000000000002" yellow="0.089999999999999997" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kKO-Lo-5El" firstAttribute="centerY" secondItem="PEn-fq-8qG" secondAttribute="centerY" id="A8l-Oc-60j"/>
+                            <constraint firstItem="Wul-nZ-JQu" firstAttribute="centerX" secondItem="PEn-fq-8qG" secondAttribute="centerX" id="EDc-kp-4OI"/>
+                            <constraint firstItem="kKO-Lo-5El" firstAttribute="centerX" secondItem="PEn-fq-8qG" secondAttribute="centerX" id="bS6-Mu-3N9"/>
+                            <constraint firstItem="Wul-nZ-JQu" firstAttribute="centerY" secondItem="PEn-fq-8qG" secondAttribute="centerY" id="e2x-n8-JNs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabWheel" id="zrk-aN-rtJ"/>
+                    <connections>
+                        <outlet property="circleCtrlView" destination="Wul-nZ-JQu" id="Guy-Pv-Rbi"/>
+                        <outlet property="circleView" destination="kKO-Lo-5El" id="GUx-kE-7Ca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyh-oz-xTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +56,7 @@
         <!--Table View Controller-->
         <scene sceneID="I8d-2i-fcJ">
             <objects>
-                <viewController id="K84-Jx-ADm" customClass="TableViewController" customModule="WheelOfChoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K84-Jx-ADm" customClass="TableViewController" customModule="RandomWheel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJy-14-nQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,10 +79,10 @@
                         <viewLayoutGuide key="safeArea" id="8Vc-D9-VgJ"/>
                         <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.080000000000000002" yellow="0.089999999999999997" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="j8w-Oi-GV6" secondAttribute="bottom" constant="83" id="1E1-Le-mvj"/>
                             <constraint firstItem="j8w-Oi-GV6" firstAttribute="leading" secondItem="8Vc-D9-VgJ" secondAttribute="leading" id="1Te-Nt-770"/>
                             <constraint firstItem="j8w-Oi-GV6" firstAttribute="top" secondItem="8Vc-D9-VgJ" secondAttribute="top" id="MYC-l7-tck"/>
                             <constraint firstItem="8Vc-D9-VgJ" firstAttribute="trailing" secondItem="j8w-Oi-GV6" secondAttribute="trailing" id="bxw-Fx-xZM"/>
-                            <constraint firstItem="8Vc-D9-VgJ" firstAttribute="bottom" secondItem="j8w-Oi-GV6" secondAttribute="bottom" id="yUl-qq-XIT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabTable" id="6MM-xs-EPv"/>
@@ -68,7 +97,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9CE-if-H5U">
             <objects>
-                <tabBarController id="Ivf-04-zWD" sceneMemberID="viewController">
+                <tabBarController id="Ivf-04-zWD" customClass="TabBarController" customModule="RandomWheel" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqH-z4-buW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,64 +115,12 @@
             </objects>
             <point key="canvasLocation" x="-1744" y="19"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WheelOfChoice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-Qv-PGO">
-                                <rect key="frame" x="37" y="100" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-Wr-zgo">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="ffL-IA-Wkd"/>
-                                    <constraint firstAttribute="height" constant="300" id="uPd-RI-gpn"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-3g-e2R">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TdD-hM-wat"/>
-                                    <constraint firstAttribute="height" constant="300" id="mzS-tn-kGM"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="yyh-3g-e2R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H7m-66-8Xh"/>
-                            <constraint firstItem="ViX-Wr-zgo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J4n-76-FJo"/>
-                            <constraint firstItem="yyh-3g-e2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePf-UM-VQD"/>
-                            <constraint firstItem="ViX-Wr-zgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqV-dc-6HK"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="circle" destination="yyh-3g-e2R" id="FLR-VP-6PO"/>
-                        <outlet property="circleCopy" destination="ViX-Wr-zgo" id="FDL-XD-UQN"/>
-                        <outlet property="rect" destination="ybC-Qv-PGO" id="NBC-wJ-aE3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="54.910714285714285"/>
-        </scene>
     </scenes>
     <resources>
         <image name="TabTable" width="30" height="30"/>
         <image name="TabWheel" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

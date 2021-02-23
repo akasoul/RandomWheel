@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,13 +13,15 @@
 		3110F3F125DBD7D800569B85 /* WheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3F025DBD7D800569B85 /* WheelViewController.swift */; };
 		3110F3F525DBDA7B00569B85 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3110F3F325DBDA7B00569B85 /* TableCell.swift */; };
 		3110F3F625DBDA7B00569B85 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3110F3F425DBDA7B00569B85 /* TableCell.xib */; };
+		31162E7525DD050000CA6B6F /* TableCellAddNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31162E7325DD050000CA6B6F /* TableCellAddNew.swift */; };
+		31162E7625DD050000CA6B6F /* TableCellAddNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31162E7425DD050000CA6B6F /* TableCellAddNew.xib */; };
 		3149F66525D5B98800E42BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66425D5B98800E42BE0 /* AppDelegate.swift */; };
 		3149F66725D5B98800E42BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66625D5B98800E42BE0 /* SceneDelegate.swift */; };
-		3149F66925D5B98800E42BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66825D5B98800E42BE0 /* ViewController.swift */; };
 		3149F66C25D5B98800E42BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3149F66A25D5B98800E42BE0 /* Main.storyboard */; };
-		3149F66F25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3149F66D25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld */; };
 		3149F67125D5B98A00E42BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3149F67025D5B98A00E42BE0 /* Assets.xcassets */; };
 		3149F67425D5B98A00E42BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3149F67225D5B98A00E42BE0 /* LaunchScreen.storyboard */; };
+		31E6064225DE606B00A65091 /* soundWheel.aif in Resources */ = {isa = PBXBuildFile; fileRef = 31E6064125DE606B00A65091 /* soundWheel.aif */; };
+		60D09CF0ED02D0108DB7789C /* Pods_RandomWheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDC5D4B90321041211E9C85 /* Pods_RandomWheel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,83 +31,122 @@
 		3110F3F025DBD7D800569B85 /* WheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelViewController.swift; sourceTree = "<group>"; };
 		3110F3F325DBDA7B00569B85 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		3110F3F425DBDA7B00569B85 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
-		3149F66125D5B98800E42BE0 /* WheelOfChoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelOfChoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31162E7325DD050000CA6B6F /* TableCellAddNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellAddNew.swift; sourceTree = "<group>"; };
+		31162E7425DD050000CA6B6F /* TableCellAddNew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCellAddNew.xib; sourceTree = "<group>"; };
+		3149F66125D5B98800E42BE0 /* RandomWheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomWheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3149F66425D5B98800E42BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3149F66625D5B98800E42BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3149F66825D5B98800E42BE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3149F66B25D5B98800E42BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3149F66E25D5B98800E42BE0 /* WheelOfChoice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelOfChoice.xcdatamodel; sourceTree = "<group>"; };
 		3149F67025D5B98A00E42BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3149F67325D5B98A00E42BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3149F67525D5B98A00E42BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31E6064125DE606B00A65091 /* soundWheel.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundWheel.aif; sourceTree = "<group>"; };
+		9793B6C3335ADDDD33FFD339 /* Pods-WheelOfChoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelOfChoice.release.xcconfig"; path = "Target Support Files/Pods-WheelOfChoice/Pods-WheelOfChoice.release.xcconfig"; sourceTree = "<group>"; };
+		9CDC5D4B90321041211E9C85 /* Pods_RandomWheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomWheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBAE6745425967A86A1D97F /* Pods-RandomWheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomWheel.debug.xcconfig"; path = "Target Support Files/Pods-RandomWheel/Pods-RandomWheel.debug.xcconfig"; sourceTree = "<group>"; };
+		C9DF614EC2B4B5F1474B7C42 /* Pods-WheelOfChoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheelOfChoice.debug.xcconfig"; path = "Target Support Files/Pods-WheelOfChoice/Pods-WheelOfChoice.debug.xcconfig"; sourceTree = "<group>"; };
+		E839DF6A27C1F1BDDEBD7170 /* Pods-RandomWheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomWheel.release.xcconfig"; path = "Target Support Files/Pods-RandomWheel/Pods-RandomWheel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3149F65E25D5B98800E42BE0 /* Frameworks */ = {
+		6A48300712866A3D15766CBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D09CF0ED02D0108DB7789C /* Pods_RandomWheel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16397D6FC62EAB9C6F3ADB8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF614EC2B4B5F1474B7C42 /* Pods-WheelOfChoice.debug.xcconfig */,
+				9793B6C3335ADDDD33FFD339 /* Pods-WheelOfChoice.release.xcconfig */,
+				BBBAE6745425967A86A1D97F /* Pods-RandomWheel.debug.xcconfig */,
+				E839DF6A27C1F1BDDEBD7170 /* Pods-RandomWheel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		31162E7125DD03EA00CA6B6F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3110F3F325DBDA7B00569B85 /* TableCell.swift */,
+				3110F3F425DBDA7B00569B85 /* TableCell.xib */,
+				31162E7325DD050000CA6B6F /* TableCellAddNew.swift */,
+				31162E7425DD050000CA6B6F /* TableCellAddNew.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3149F65825D5B98800E42BE0 = {
 			isa = PBXGroup;
 			children = (
-				3149F66325D5B98800E42BE0 /* WheelOfChoice */,
+				3149F66325D5B98800E42BE0 /* RandomWheel */,
 				3149F66225D5B98800E42BE0 /* Products */,
+				16397D6FC62EAB9C6F3ADB8A /* Pods */,
+				907F27B84C47AECF8B60A941 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3149F66225D5B98800E42BE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3149F66125D5B98800E42BE0 /* WheelOfChoice.app */,
+				3149F66125D5B98800E42BE0 /* RandomWheel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3149F66325D5B98800E42BE0 /* WheelOfChoice */ = {
+		3149F66325D5B98800E42BE0 /* RandomWheel */ = {
 			isa = PBXGroup;
 			children = (
 				3149F66425D5B98800E42BE0 /* AppDelegate.swift */,
 				3149F66625D5B98800E42BE0 /* SceneDelegate.swift */,
-				3149F66825D5B98800E42BE0 /* ViewController.swift */,
 				3149F66A25D5B98800E42BE0 /* Main.storyboard */,
 				3110F3E925DBD6A000569B85 /* Wheel.swift */,
 				3110F3E625DBD67300569B85 /* TabBarController.swift */,
 				3110F3EC25DBD7C300569B85 /* TableViewController.swift */,
 				3110F3F025DBD7D800569B85 /* WheelViewController.swift */,
-				3110F3F325DBDA7B00569B85 /* TableCell.swift */,
-				3110F3F425DBDA7B00569B85 /* TableCell.xib */,
+				31162E7125DD03EA00CA6B6F /* Cells */,
 				3149F67025D5B98A00E42BE0 /* Assets.xcassets */,
 				3149F67225D5B98A00E42BE0 /* LaunchScreen.storyboard */,
 				3149F67525D5B98A00E42BE0 /* Info.plist */,
-				3149F66D25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld */,
+				31E6064125DE606B00A65091 /* soundWheel.aif */,
 			);
-			path = WheelOfChoice;
+			path = RandomWheel;
+			sourceTree = "<group>";
+		};
+		907F27B84C47AECF8B60A941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CDC5D4B90321041211E9C85 /* Pods_RandomWheel.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3149F66025D5B98800E42BE0 /* WheelOfChoice */ = {
+		3149F66025D5B98800E42BE0 /* RandomWheel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3149F67825D5B98A00E42BE0 /* Build configuration list for PBXNativeTarget "WheelOfChoice" */;
+			buildConfigurationList = 3149F67825D5B98A00E42BE0 /* Build configuration list for PBXNativeTarget "RandomWheel" */;
 			buildPhases = (
+				3A118AABABE222E6E0D86598 /* [CP] Check Pods Manifest.lock */,
 				3149F65D25D5B98800E42BE0 /* Sources */,
-				3149F65E25D5B98800E42BE0 /* Frameworks */,
 				3149F65F25D5B98800E42BE0 /* Resources */,
+				6A48300712866A3D15766CBE /* Frameworks */,
+				B31AC3E69A7F328B81A78BF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WheelOfChoice;
+			name = RandomWheel;
 			productName = WheelOfChoice;
-			productReference = 3149F66125D5B98800E42BE0 /* WheelOfChoice.app */;
+			productReference = 3149F66125D5B98800E42BE0 /* RandomWheel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +163,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3149F65C25D5B98800E42BE0 /* Build configuration list for PBXProject "WheelOfChoice" */;
+			buildConfigurationList = 3149F65C25D5B98800E42BE0 /* Build configuration list for PBXProject "RandomWheel" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +176,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3149F66025D5B98800E42BE0 /* WheelOfChoice */,
+				3149F66025D5B98800E42BE0 /* RandomWheel */,
 			);
 		};
 /* End PBXProject section */
@@ -145,7 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31162E7625DD050000CA6B6F /* TableCellAddNew.xib in Resources */,
 				3149F67425D5B98A00E42BE0 /* LaunchScreen.storyboard in Resources */,
+				31E6064225DE606B00A65091 /* soundWheel.aif in Resources */,
 				3149F67125D5B98A00E42BE0 /* Assets.xcassets in Resources */,
 				3110F3F625DBDA7B00569B85 /* TableCell.xib in Resources */,
 				3149F66C25D5B98800E42BE0 /* Main.storyboard in Resources */,
@@ -154,6 +197,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A118AABABE222E6E0D86598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomWheel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B31AC3E69A7F328B81A78BF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomWheel/Pods-RandomWheel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomWheel/Pods-RandomWheel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomWheel/Pods-RandomWheel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3149F65D25D5B98800E42BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -161,13 +246,12 @@
 			files = (
 				3110F3F525DBDA7B00569B85 /* TableCell.swift in Sources */,
 				3110F3F125DBD7D800569B85 /* WheelViewController.swift in Sources */,
-				3149F66925D5B98800E42BE0 /* ViewController.swift in Sources */,
 				3110F3ED25DBD7C300569B85 /* TableViewController.swift in Sources */,
 				3149F66525D5B98800E42BE0 /* AppDelegate.swift in Sources */,
 				3149F66725D5B98800E42BE0 /* SceneDelegate.swift in Sources */,
 				3110F3EA25DBD6A000569B85 /* Wheel.swift in Sources */,
 				3110F3E725DBD67300569B85 /* TabBarController.swift in Sources */,
-				3149F66F25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld in Sources */,
+				31162E7525DD050000CA6B6F /* TableCellAddNew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +328,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -299,9 +384,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -311,17 +397,18 @@
 		};
 		3149F67925D5B98A00E42BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBBAE6745425967A86A1D97F /* Pods-RandomWheel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AWCXD32G9;
-				INFOPLIST_FILE = WheelOfChoice/Info.plist;
+				INFOPLIST_FILE = RandomWheel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akasoul.WheelOfChoice;
+				PRODUCT_BUNDLE_IDENTIFIER = akasoul.RandomWheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,17 +417,18 @@
 		};
 		3149F67A25D5B98A00E42BE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E839DF6A27C1F1BDDEBD7170 /* Pods-RandomWheel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AWCXD32G9;
-				INFOPLIST_FILE = WheelOfChoice/Info.plist;
+				INFOPLIST_FILE = RandomWheel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akasoul.WheelOfChoice;
+				PRODUCT_BUNDLE_IDENTIFIER = akasoul.RandomWheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3149F65C25D5B98800E42BE0 /* Build configuration list for PBXProject "WheelOfChoice" */ = {
+		3149F65C25D5B98800E42BE0 /* Build configuration list for PBXProject "RandomWheel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3149F67625D5B98A00E42BE0 /* Debug */,
@@ -359,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3149F67825D5B98A00E42BE0 /* Build configuration list for PBXNativeTarget "WheelOfChoice" */ = {
+		3149F67825D5B98A00E42BE0 /* Build configuration list for PBXNativeTarget "RandomWheel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3149F67925D5B98A00E42BE0 /* Debug */,
@@ -369,19 +457,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3149F66D25D5B98800E42BE0 /* WheelOfChoice.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3149F66E25D5B98800E42BE0 /* WheelOfChoice.xcdatamodel */,
-			);
-			currentVersion = 3149F66E25D5B98800E42BE0 /* WheelOfChoice.xcdatamodel */;
-			path = WheelOfChoice.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3149F65925D5B98800E42BE0 /* Project object */;
 }
