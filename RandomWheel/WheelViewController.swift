@@ -150,7 +150,14 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         for i in 0..<(self.model?.getCount() ?? 0){
             let textView = UITextView()
             textView.text=""
-            textView.textContainer.exclusionPaths=[UIBezierPath()]
+            let path1 = UIBezierPath()
+            path1.move(to: CGPoint(x: radius, y: 0))
+            path1.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: 0, endAngle: 0.5*self.angleStep*CGFloat.pi/180, clockwise: true)
+            path1.addLine(to: CGPoint(x: radius, y: radius))
+            path1.addLine(to: CGPoint(x: 0, y: radius))
+            path1.addLine(to: CGPoint(x: 0, y: 0))
+            path1.addLine(to: CGPoint(x: radius, y: 0))
+            textView.textContainer.exclusionPaths=[path1]
             
             let text: String = array[i].0
             let clr: UIColor = array[i].1
@@ -190,6 +197,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
             if (xlen>0 && ylen<0)||(xlen<0&&ylen<0) {
                 angle = acos(xlen/rad)
             }
+            print("init angle = \(angle)")
             self.prevAngle=angle
         }
         
@@ -221,6 +229,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
                     let angle = self.angleSpeed  - self.angleSpeed * log(CGFloat(i)) / log(CGFloat(counter))
                     self.decayAngle -= angle
                 }
+                print("prevAngle = \(self.prevAngle)\ndecayPrevAngle = \(self.decayAngle)")
             }
             
             let scale = CGFloat.random(in: 1..<1.5)
