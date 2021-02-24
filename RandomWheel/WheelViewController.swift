@@ -37,9 +37,15 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         }
     }
     private var prevAngleSoundPlayed: CGFloat=0
+    private var tmpAngle:CGFloat=0{
+        didSet{
+            print(self.tmpAngle)
+        }
+    }
     private var decayAngle: CGFloat=0{
         didSet{
             DispatchQueue.main.async{
+                self.tmpAngle += self.decayAngle-self.decayPrevAngle
                 let rotate:CGAffineTransform = self.circleView.transform.rotated(by: self.decayAngle-self.decayPrevAngle)
                 self.circleView.transform = rotate
                 self.decayPrevAngle=self.decayAngle
@@ -71,6 +77,9 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         super.viewDidLoad()
         do{
             self.player = try AVAudioPlayer(contentsOf: self.soundURL)
+            self.player?.volume=0.0
+            self.player?.play()
+            self.player?.volume=1.0
         }
         catch{ }
         if let tmp=(self.parent as? TabBarController){
@@ -98,14 +107,14 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         self.banner.delegate=self
         self.banner.load(GADRequest())
         self.view.addSubview(self.banner)
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear")
         self.model?.delegate=self
         self.createWheel()
-//        self.circleView.setNeedsLayout()
+        //        self.circleView.setNeedsLayout()
     }
     
     func modelUpdate() {
@@ -113,7 +122,6 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
     }
     
     func createWheel(){
-        //self.view=UIView()
         self.circleView.transform=CGAffineTransform.init(rotationAngle: 0)
         self.sectors=[]
         self.sectorsLabels=[]
@@ -148,33 +156,44 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         }
         
         for i in 0..<(self.model?.getCount() ?? 0){
-            let textView = UITextView()
-            textView.text=""
-            let path1 = UIBezierPath()
-            path1.move(to: CGPoint(x: radius, y: 0))
-            path1.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: 0, endAngle: 0.5*self.angleStep*CGFloat.pi/180, clockwise: true)
-            path1.addLine(to: CGPoint(x: radius, y: radius))
-            path1.addLine(to: CGPoint(x: 0, y: radius))
-            path1.addLine(to: CGPoint(x: 0, y: 0))
-            path1.addLine(to: CGPoint(x: radius, y: 0))
-            textView.textContainer.exclusionPaths=[path1]
-            
             let text: String = array[i].0
-            let clr: UIColor = array[i].1
-            let view=UIView(frame: self.circleView.bounds)
-            let textLayer=CATextLayer()
-            textLayer.frame=CGRect(x: 0, y: 0, width: self.circleView.bounds.width, height: self.circleView.bounds.height*0.5)//self.circleView.bounds
-            textLayer.string = text
-            textLayer.alignmentMode = .center
-            textLayer.foregroundColor=UIColor.white.cgColor
-            textLayer.borderWidth=2.0
-            textLayer.borderColor=clr.cgColor
-            view.layer.addSublayer(textLayer)
+            let textView = UITextView(frame: CGRect(x: 0, y: 0, width: self.circleView.bounds.width, height: self.circleView.bounds.height))
+            textView.backgroundColor = .clear
+            textView.textAlignment = .center
+            textView.textColor = UIColor.white
+            textView.text=text
+            textView.isEditable=false
+            textView.isSelectable=false
+            textView.isScrollEnabled=false
+            let step:CGFloat = self.angleStep*CGFloat.pi/180
+            let path=UIBezierPath()
+            
+//            path.move(to: .init(x: 0, y: 0))
+//            path.addLine(to: .init(x: radius, y: 0))
+//            path.addLine(to: .init(x: 2*radius, y: 0))
+//            path.addLine(to: .init(x: 2*radius, y: radius))
+//            path.addLine(to: .init(x: radius, y: radius))
+//            path.addArc(withCenter: .init(x: radius, y: radius), radius: radius, startAngle: -CGFloat.pi/2+0.5*step, endAngle: -CGFloat.pi/2 - 0.5*step, clockwise: false)
+//            path.addLine(to: .init(x: radius, y: radius))
+//            path.addLine(to: .init(x: 0, y: radius))
+//            path.addLine(to: .init(x: 0, y: 0))
+            
+            path.move(to: .init(x: 0, y: 0))
+            path.addLine(to: .init(x: 2*radius, y: 0))
+            path.addLine(to: .init(x: 2*radius, y: 2*radius))
+            path.addLine(to: .init(x: 0, y: 2*radius))
+            path.addLine(to: .init(x: 0, y: 0))
+            path.move(to: .init(x: radius, y: radius))
+            path.addArc(withCenter: .init(x: radius, y: radius), radius: radius, startAngle: -CGFloat.pi/2+0.5*step, endAngle: -CGFloat.pi/2 - 0.5*step, clockwise: false)
+            path.addLine(to: .init(x: radius, y: radius))
+            
+            
+            textView.textContainer.exclusionPaths=[path]
+            //textView.frame=CGRect(x: 0, y: 0, width: self.circleView.bounds.width, height: self.circleView.bounds.height*0.5)
             let angle=CGFloat.pi/2+(self.angleStep*CGFloat(i) + self.angleStep/2)*CGFloat.pi/180
             let rotate:CGAffineTransform = view.transform.rotated(by: angle)
-            view.transform=rotate
-            //view.frame=CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height*0.5)
-            self.sectorsLabels.append(view)
+            textView.transform=rotate
+            self.sectorsLabels.append(textView)
             self.circleView.addSubview(self.sectorsLabels[i])
         }
         
@@ -213,6 +232,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
             else{
                 angle = acos(xlen/rad)
             }
+            self.tmpAngle += -(angle-self.prevAngle)
             let rotate:CGAffineTransform = gestureRecognizer.view!.transform.rotated(by: -(angle-self.prevAngle))
             self.prevAngle=angle
             gestureRecognizer.view!.transform = rotate
@@ -240,11 +260,11 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         
     }
-
+    
     func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
         
     }
-
+    
     func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
         
     }

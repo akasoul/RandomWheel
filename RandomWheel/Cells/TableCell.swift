@@ -9,7 +9,6 @@ import UIKit
 
 class TableCell: UITableViewCell {
     @IBOutlet weak var view: UIView!
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var field: CustomTextField!{
         didSet{
             print("Cell text")
