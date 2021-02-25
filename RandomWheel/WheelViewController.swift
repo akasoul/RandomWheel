@@ -250,10 +250,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
                     self.decayAngle -= angle
                 }
                 print("prevAngle = \(self.prevAngle)\ndecayPrevAngle = \(self.decayAngle)")
-            }
-            
-            let scale = CGFloat.random(in: 1..<1.5)
-            let ind = Int.random(in: 0..<self.sectors.count)
+            }            
         }
     }
     
