@@ -1,0 +1,9 @@
+/* 
+  Strings.strings
+  RandomWheel
+
+  Created by Anton Voloshuk on 25.02.2021.
+  
+*/
+"IDS_SECTOR_YES"="Yes";
+"IDS_SECTOR_NO"="No";

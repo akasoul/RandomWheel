@@ -65,7 +65,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @objc func buttonTap(){
-        self.model?.addNew(String(Int.random(in: 0..<100)))
+        self.model?.addNew("")
     }
     
     @objc func textFieldDidChange(_ textField: UITextField){

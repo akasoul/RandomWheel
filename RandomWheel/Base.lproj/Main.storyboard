@@ -33,6 +33,16 @@
                                     <constraint firstAttribute="height" constant="300" id="vP7-tI-9hL"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-cL-JdD">
+                                <rect key="frame" x="107" y="114" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KOT-ug-bBw"/>
+                                    <constraint firstAttribute="height" constant="50" id="r5Y-s2-zCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LMd-3x-IpK"/>
                         <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.080000000000000002" yellow="0.089999999999999997" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -41,17 +51,20 @@
                             <constraint firstItem="Wul-nZ-JQu" firstAttribute="centerX" secondItem="PEn-fq-8qG" secondAttribute="centerX" id="EDc-kp-4OI"/>
                             <constraint firstItem="kKO-Lo-5El" firstAttribute="centerX" secondItem="PEn-fq-8qG" secondAttribute="centerX" id="bS6-Mu-3N9"/>
                             <constraint firstItem="Wul-nZ-JQu" firstAttribute="centerY" secondItem="PEn-fq-8qG" secondAttribute="centerY" id="e2x-n8-JNs"/>
+                            <constraint firstItem="Fio-cL-JdD" firstAttribute="top" secondItem="LMd-3x-IpK" secondAttribute="top" constant="70" id="j66-Wi-R7L"/>
+                            <constraint firstItem="Fio-cL-JdD" firstAttribute="centerX" secondItem="PEn-fq-8qG" secondAttribute="centerX" id="mBl-eE-6oM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="TabWheel" id="zrk-aN-rtJ"/>
                     <connections>
                         <outlet property="circleCtrlView" destination="Wul-nZ-JQu" id="Guy-Pv-Rbi"/>
                         <outlet property="circleView" destination="kKO-Lo-5El" id="GUx-kE-7Ca"/>
+                        <outlet property="winnerLabel" destination="Fio-cL-JdD" id="2bS-mb-FJq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyh-oz-xTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="322"/>
+            <point key="canvasLocation" x="-855.07246376811599" y="320.75892857142856"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="I8d-2i-fcJ">
