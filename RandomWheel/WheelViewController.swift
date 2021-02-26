@@ -29,7 +29,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
     private var sectorsAngles: [(CGFloat,CGFloat)]=[]
     private var model: Wheel?
     private var gestureBeganPoint: CGPoint?
-
+    
     private var rotating = false
     private var rotationAngle: CGFloat=0{
         didSet{
@@ -80,14 +80,16 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
             
             let radStep = self.angleStep*CGFloat.pi/180
             if(abs(abs(self.rotationAnglePrev)-abs(self.prevAngleSoundPlayed))>radStep){
-                self.player?.play()
-                self.prevAngleSoundPlayed=self.rotationAnglePrev
+                DispatchQueue.global().async{
+                    self.player?.play()
+                    self.prevAngleSoundPlayed=self.rotationAnglePrev
+                }
             }
         }
     }
     private var prevAngleSoundPlayed: CGFloat=0
     private var angleUpdateTime: Date?
-
+    
     private var timeInterval: CGFloat = 0
     private var angleSpeed: CGFloat=0
     private var angleStep: CGFloat=0
@@ -113,7 +115,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         self.recognizer.addTarget(self, action: #selector(self.gesture(_:)))
         self.circleView.addGestureRecognizer(self.recognizer)
         
-        self.bannerInit()
+        //self.bannerInit()
     }
     
     func bannerInit(){
@@ -176,7 +178,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
             let startAngle=CGFloat(i)*self.angleStep*CGFloat.pi/180
             let stopAngle=CGFloat(i+1)*self.angleStep*CGFloat.pi/180
             self.sectors.append(Sector(startAngle: startAngle, stopAngle: stopAngle, label: text, color: color,view: view))
-
+            
         }
         
         for i in 0..<(self.model?.getCount() ?? 0){
