@@ -62,7 +62,7 @@ class Wheel{
                 return false
             }
         }) || (self.data.last?.color ?? UIColor(red: 0, green: 0, blue: 0, alpha: 0)).almostEqual(compare: color)){
-            print("reinit color")
+            //print("reinit color")
             if #available(iOS 13.0, *) {
                  color = UIColor(cgColor:CGColor.init(genericCMYKCyan: CGFloat.random(in: 0..<1), magenta: 0.4, yellow: CGFloat.random(in: 0..<1), black: 0, alpha: 1 ))
             } else {
@@ -76,7 +76,6 @@ class Wheel{
     
     func getAt(_ index: Int)->(String,UIColor)?{
         if(index<self.getCount()){
-            //            print("index=\(index) text=\(self.data[index].description) color=\(self.data[index].color.hash)")
             return (self.data[index].description,self.data[index].color)
         }
         return nil
