@@ -71,10 +71,10 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
     private var rotationAnglePrev: CGFloat=0{
         didSet{
             if(abs(abs(self.rotationAnglePrev)-abs(oldValue))<CGFloat.pi/2){
-                self.angleSpeed=(self.angleSpeed*2 + self.rotationAnglePrev-oldValue)/3
+                self.angleSpeed=(self.angleSpeed + self.rotationAnglePrev-oldValue)/2
             }
             
-            self.timeInterval=(self.timeInterval*2 + CGFloat(Date().timeIntervalSince1970-(self.angleUpdateTime ?? Date()).timeIntervalSince1970))/3
+            self.timeInterval=(self.timeInterval + CGFloat(Date().timeIntervalSince1970-(self.angleUpdateTime ?? Date()).timeIntervalSince1970))/2
             
             self.angleUpdateTime=Date()
             
@@ -102,9 +102,6 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
         super.viewDidLoad()
         do{
             self.player = try AVAudioPlayer(contentsOf: self.soundURL)
-            self.player?.volume=0.0
-            self.player?.play()
-            self.player?.volume=1.0
         }
         catch{ }
         if let tmp=(self.parent as? TabBarController){
