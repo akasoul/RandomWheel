@@ -258,7 +258,7 @@ class WheelViewController: UIViewController,UIDropInteractionDelegate, WheelDele
             }
             let tmpSpeed = self.angleSpeed*2.0
             let tmpInterval = self.timeInterval
-            print("Duration = \(duration) angleSpeed = \(self.angleStep)")
+            print("Duration = \(duration) angleSpeed = \(self.angleSpeed)")
             DispatchQueue.global().async{
                 for i in 1..<counter{
                     DispatchQueue.global().sync{
